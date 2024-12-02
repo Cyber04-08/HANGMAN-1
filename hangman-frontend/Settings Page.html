@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Hangman</title>
+    <link rel="stylesheet" href="C:\Users\nwane\OneDrive\Desktop\HANGMAN\hangman-frontend\Style.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h1 class="title">Settings</h1>
+        <div class="settings-options">
+            <label>
+                <input type="checkbox" id="toggle-music" checked>
+                Toggle Background Music
+            </label>
+        </div>
+        <button class="back-button">Back</button>
+    </div>
+
+    <script>
+        // Initialize the background music
+        const toggleMusic = document.getElementById("toggle-music");
+        const backgroundMusic = new Audio("C:/Users/nwane/OneDrive/Desktop/HANGMAN/hangman-frontend/Audio Files/Background.mp3");
+        backgroundMusic.loop = true;
+
+        // Play music after ensuring user interaction
+        const startMusic = () => {
+            backgroundMusic.play().catch(() => {
+                // If autoplay fails, wait for the user to interact
+                console.warn("Autoplay blocked. Waiting for user interaction.");
+            });
+        };
+
+        // Ensure music plays on load if toggle is checked
+        if (toggleMusic.checked) {
+            startMusic();
+        }
+
+        // Toggle music on checkbox change
+        toggleMusic.addEventListener("change", () => {
+            if (toggleMusic.checked) {
+                startMusic();
+            } else {
+                backgroundMusic.pause();
+            }
+        });
+
+        // Back button navigation
+        document.querySelector(".back-button").addEventListener("click", () => {
+            // Navigate back to the landing page
+            window.location.href = "C:/Users/nwane/OneDrive/Desktop/HANGMAN/hangman-frontend/Landing Page.html"; // Replace with your landing page path
+        });
+    </script>
+</body>
+</html>
+

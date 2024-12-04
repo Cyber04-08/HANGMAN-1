@@ -1,3 +1,23 @@
+/* For the Hangman page */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #6F65CA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #8286c9;
+}
+
 /* General Body Styling */
 body {
     margin: 0;
@@ -263,3 +283,42 @@ body {
 .hint-text b {
     color: #0c0c0d; 
 }
+
+
+
+
+
+.category-container {
+    text-align: center;
+}
+
+.category-container .title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff; 
+}
+
+.category-buttons button {
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background: #6F65CA; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.category-buttons button:hover {
+    background: #8286c9; /* Slightly lighter on hover */
+}
+
+
+
+
+

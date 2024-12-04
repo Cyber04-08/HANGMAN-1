@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Selection | Hangman</title>
+    <link rel="stylesheet" href="C:/Users/nwane/OneDrive/Desktop/HANGMAN/hangman-frontend/Style.css">
+</head>
+<body>
+    <div class="category-container">
+        <h1 class="title">Select a Category</h1>
+        <div class="category-buttons">
+            <button onclick="selectCategory('Insects')">Insects</button>
+            <button onclick="selectCategory('Music')">Music</button>
+            <button onclick="selectCategory('Nature')">Nature</button>
+            <button onclick="selectCategory('Science')">Science</button>
+            <button onclick="selectCategory('Food')">Food</button>
+            <button onclick="selectCategory('Sports')">Sports</button>
+            <button onclick="selectCategory('Literature')">Literature</button>
+            <button onclick="selectCategory('Mystery')">Mystery</button>
+            <button onclick="selectCategory('Adventure')">Adventure</button>
+            <button onclick="selectCategory('Random')">Random</button>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">Back</button>
+</div>
+
+<script>
+    function selectCategory(category) {
+        // Navigate to the Hangman game with the selected category
+        const url = `C:/Users/nwane/OneDrive/Desktop/HANGMAN/hangman-frontend/Hangman.html?category=${category}`;
+        window.location.href = url;
+    }
+
+    function goBack() {
+        // Navigate back to the landing page
+        window.location.href = "C:/Users/nwane/OneDrive/Desktop/HANGMAN/hangman-frontend/Landing Page.html"; // Replace with your landing page path
+    }
+</script>
+</body>
+</html>
